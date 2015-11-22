@@ -6,15 +6,15 @@
   <body>
     <h1> Reputation of Companies in the News
     </h1>
-      <h3 id="header3">CNN Reputation</h3>
-      <img id="funDisplay" src='https://www.wolframcloud.com/objects/user-9ad46431-f053-494c-9ec6-d1601bb7f2c0/SentimentAnalysisStocksInNews?stock=default'
-           alt='Graph of Company Reputation'>
       <p>This site analyzes analyzes companies' reputations in the news media. 
       </p>
       <p>Over 60,000 CNN Money articles from the past three years were analyzed
       using sentiment analysis to track a reputation over time. </p>
-          Company Stock Ticker:
+      <h3 id="header3">CNN Reputation</h3>
+      <img id="funDisplay" src='https://www.wolframcloud.com/objects/user-9ad46431-f053-494c-9ec6-d1601bb7f2c0/SentimentAnalysisStocksInNews?stock=default'
+           alt='Graph of Company Reputation'>
           <br>
+          Company Stock Ticker:
           <input id="stock" type='text' name='stock'>
           <input type="submit" value="Submit" onclick="changeImage(); return false;">
       
@@ -23,7 +23,7 @@
         
         document.getElementById("funDisplay").src = ("https://www.wolframcloud.com/objects/user-9ad46431-f053-494c-9ec6-d1601bb7f2c0/SentimentAnalysisStocksInNews?stock="
                 +document.getElementById("stock").value);
-        document.getElementById("header3").innerHTML += (" for "+document.getElementById("stock").value)
+        document.getElementById("header3").innerHTML = ("CNN Reputation for "+document.getElementById("stock").value)
         }
 
     </script>
